@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Iife_013</title>
+  </head>
+<body>
+
+  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+
+(function() {
+  /*	
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+  var   btn1 = document.getElementById('button'); //获取按钮节点
+  var  aqiin = document.getElementById('aqi-input');//获取input节点
+  var aqidis = document.getElementById('aqi-display');//获取输入框节点
+    btn1.onclick=function(){   //点击事件的函数
+      var text=aqiin.value;  //获取input值
+      aqidis.innerHTML = text; //将input里的值写入输入框
+    }
+
+})();
+
+</script>
+</body>
+</html>
